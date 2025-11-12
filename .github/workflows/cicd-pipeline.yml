@@ -20,10 +20,10 @@ jobs:
         working-directory: ./${{ matrix.app }}
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '16.x'
         cache: 'npm'
@@ -49,11 +49,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     # 前端构建
     - name: Setup Node.js for frontend
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '16.x'
         cache: 'npm'
@@ -67,9 +67,9 @@ jobs:
         echo "NODE_ENV=production" >> .env
         npm run build || echo "Frontend build completed with warnings"
     
-    # 后端构建准备
+    # 后端准备
     - name: Setup Node.js for backend
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '16.x'
         cache: 'npm'
@@ -85,7 +85,7 @@ jobs:
         echo "NODE_ENV=production" >> .env
     
     - name: Archive build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: build-artifacts
         path: |
