@@ -7,7 +7,7 @@
 - **构建工具**: Vite
 - **UI库**: Ant Design
 - **HTTP客户端**: Axios
-- **状态管理**: React Context API (或Redux，根据需求选择)
+- **状态管理**: Redux，根据需求选择
 
 ### 后端
 - **运行环境**: Node.js
