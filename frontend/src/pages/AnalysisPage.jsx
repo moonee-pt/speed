@@ -24,6 +24,7 @@ const practiceDistribution = [
 
 // 模拟年度趋势数据
 const yearlyTrends = [
+  { year: '2018', count: 11 },
   { year: '2019', count: 12 },
   { year: '2020', count: 25 },
   { year: '2021', count: 38 },
